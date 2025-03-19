@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style_css/index_login_susces.css"> 
+    <title>Chat Web</title>
+</head>
+<body>
+    <div id="header">
+        <div class="logo">
+            <img src="/image/logo.png" alt="Logo" height="60px">
+            <div class="menu">
+                <a href="">Liên Hệ</a>
+                <a href="http://">Điều Khoản</a>
+                <a href="http://">Trung Tâm Trợ Giúp</a>
+                <a href="http://">Tính Năng</a>
+                <span id="loginUser">🔄 Đang kiểm tra...</span>
+                <button id="logoutButton">🚪 Đăng xuất</button>
+            </div>
+        </div>        
+    </div>
+
+    <!-- ✅ Giao diện chat -->
+    <div id="content">
+        <div class="chat-container">
+            <div class="user-list">
+                <h3>Danh sách người dùng</h3>
+                <ul id="users"></ul>
+            </div>
+
+            <div class="chat-box">
+                <div class="chat-header">
+                    <h2 id="chatWith">💬 Chọn người để chat</h2>
+                </div>
+                <div class="messages" id="messages"></div>
+                <div class="chat-input">
+                    <input type="text" id="messageInput" placeholder="Nhập tin nhắn...">
+                    <button id="send">Gửi</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ✅ Đảm bảo file JavaScript -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/auth/chat.js"></script> <!-- ✅ Sửa đường dẫn JavaScript -->
+</body>
+</html>

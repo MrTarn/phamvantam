@@ -1,0 +1,215 @@
+/* 🔹 Định dạng chung */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #a2d2ff, #e3f2fd);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-attachment: fixed;
+}
+
+/* 🔹 Header */
+#header{
+    width: 100%;
+    background-color: #3b82f6;
+    color: #fff;
+    flex-wrap: wrap;
+}
+
+#header img{
+    position: relative;
+    top: 20px;
+}
+
+#header .menu{
+    position: relative;
+    bottom: 20px;
+    gap: 60px;
+    display: flex;
+    flex-wrap: wrap; 
+    margin: 0px 100px;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+#header .menu a {
+    text-decoration: none;
+    color: #ffffff;
+    border-radius: 20px;
+    padding: 8px 15px;
+    background-color: #2563eb;
+    transition: background 0.3s ease;
+}
+
+#header .menu a:hover{
+    background-color: #1e40af;
+    box-shadow: 0px 0px 12px #93c5fd;
+}
+
+#header .menu span {
+    position: relative;
+    font-weight: bold;
+    left: 50px;
+    margin-top: 5px;
+}
+
+/* 🔹 Nút đăng xuất */
+#logoutButton {
+    background-color: #ef4444;
+    color: white;
+    padding: 5px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    display: none;
+}
+
+#logoutButton:hover {
+    background-color: #b91c1c;
+}
+
+/* 🔹 Giao diện chat */
+#content {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    width: 1200px;
+    height: 550px;
+}
+
+.chat-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* 🔹 Danh sách người dùng */
+.user-list {
+    width: 30%;
+    background-color: #eff6ff;
+    padding: 15px;
+    overflow-y: auto;
+}
+
+.user-list h3 {
+    text-align: center;
+}
+
+.user-list ul {
+    list-style: none;
+    padding: 25px;
+}
+
+.user-list li {
+    padding: 12px;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+}
+
+.user-list li:hover {
+    background-color: #93c5fd;
+}
+
+/* 🔹 Khung chat */
+.chat-box {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+}
+
+.chat-header {
+    background-color: #2563eb;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.messages {
+    flex-grow: 1;
+    padding: 15px;
+    overflow-y: auto;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 🔹 Tin nhắn */
+.message {
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    max-width: 70%;
+    word-wrap: break-word;
+}
+
+.sent {
+    background-color: #3b82f6;
+    color: white;
+    align-self: flex-end;
+}
+
+.received {
+    background-color: #dbeafe;
+    align-self: flex-start;
+}
+
+/* 🔹 Thời gian tin nhắn */
+.time {
+    font-size: 12px;
+    color: gray;
+    margin-left: 5px;
+}
+
+/* 🔹 Ô nhập tin nhắn */
+.chat-input {
+    display: flex;
+    padding: 10px;
+    background-color: #e0f2fe;
+    border-top: 1px solid #ddd;
+}
+
+.chat-input input {
+    flex-grow: 1;
+    padding: 12px;
+    border: 1px solid #3b82f6;
+    border-radius: 5px;
+}
+
+#send {
+    background-color: #2563eb;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+#send:hover {
+    background-color: #1e40af;
+}
+
+/* 🔹 Responsive */
+@media screen and (max-width: 768px) {
+    #content {
+        flex-direction: column;
+    }
+
+    .user-list {
+        width: 100%;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .chat-box {
+        width: 100%;
+    }
+}
